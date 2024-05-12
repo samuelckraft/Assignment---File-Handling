@@ -9,4 +9,6 @@ def extract_emails(file):
             for email in emails:
                 print(f'- {email}')
 
-extract_emails('contacts.txt')
+email_input = input("Enter file/path to be checked: ")
+
+extract_emails(email_input)

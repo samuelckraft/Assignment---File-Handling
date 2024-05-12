@@ -2,6 +2,3 @@ John Doe - john.doe@example.com
 Jane Smith - jane.smith@gmail.com
 
 For inquiries, please contact info@example.com
-
-
-I am cool samuelckraft@gmail.com
