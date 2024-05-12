@@ -31,3 +31,28 @@ def report_file_size(directory):
 
 file_size_input = input("Enter directory name/path: ")
 report_file_size(file_size_input)
+
+
+#Task 3
+def count_file_extensions(directory):
+    file_types = {}
+    try:
+        for file in os.listdir(directory):
+            file_path = os.path.join(directory, file)
+            if os.path.isfile(file_path):
+                name, extension = os.path.splitext(file)
+                extension = extension.lower()
+                if extension in file_types:
+                    file_types[extension] += 1
+                else:
+                    file_types[extension] = 1
+        for key, value in file_types.items():
+            print(f"{key} - {value} files")
+    except FileNotFoundError:
+        print(f"Directory '{directory}' not found.")
+    except PermissionError:
+        print(f"Permission denied for directory '{directory}'.")
+
+file_ext_input = input("Enter directory name/path: ")
+
+count_file_extensions(file_ext_input)
